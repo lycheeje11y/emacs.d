@@ -31,10 +31,6 @@
 ;;   :init (require 'eldoc-box)
 ;;   :hook ('eglot-managed-mode-hook #'eldoc-box-hover-mode))
 
-(use-package yasnippet :straight (:build t))
-(use-package yasnippet-snippets :straight (:build t))
-(yas-global-mode)
-
 (defun corfu-lsp-setup ()
   (setq-local completion-styles '(orderless)
 	      completion-category-defaults nil))

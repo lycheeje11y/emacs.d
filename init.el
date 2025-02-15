@@ -9,9 +9,9 @@
 
 (require 'packages)
 (require 'dashboard)
+(require 'completion)
 (require 'lsp)
 (require 'treesitter)
-(require 'completion)
 (require 'programming)
 
 (require 'indentation)

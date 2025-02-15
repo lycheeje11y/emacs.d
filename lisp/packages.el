@@ -97,7 +97,7 @@
   (evil-mode 1)
   (setq evil-want-fine-undo t) ; more granular undo with evil
   (evil-set-initial-state 'messages-buffer-mode 'normal)
-  (evil-set-initial-state 'dashboard-mode 'normal)
+  (evil-set-initial-state 'dashboard-mode 'emacs)
   (evil-set-initial-state 'dired-mode 'emacs))
 
 (use-package evil-nerd-commenter
@@ -201,5 +201,10 @@
    ("C-c r"     . crux-rename-file-and-buffer)
    ("C-c I"     . crux-find-user-init-file)
    ("M-o"       . crux-other-window-or-switch-buffer)))
+
+(use-package git-gutter
+  :straight (:build t)
+  :init
+  (global-git-gutter-mode +1))
 
 (provide 'packages)

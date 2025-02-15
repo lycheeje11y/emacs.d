@@ -25,6 +25,7 @@
   (setq corfu-auto t
     corfu-quit-no-match 'separator) ;; or t
 
+
 ;; Enable vertico
 (use-package vertico
   :straight (:build: t)
@@ -103,7 +104,19 @@
   (add-hook 'completion-at-point-functions #'cape-elisp-block)
   (add-hook 'completion-at-point-functions #'cape-history)
   (add-hook 'completion-at-point-functions #'cape-keyword)
+  (add-hook 'completion-at-point-functions #'yasnippet-capf)
 )
+
+(use-package yasnippet :straight (:build t))
+(use-package yasnippet-capf
+  :after cape
+  :config
+  (add-to-list 'completion-at-point-functions #'yasnippet-capf))
+(use-package yasnippet-snippets :straight (:build t))
+(yas-global-mode)
+
+
+
 
 ;; A few more useful configurations...
 (use-package emacs
