@@ -77,7 +77,9 @@
 
 ;; optionally
 (use-package lsp-ui
-  :straight (:build t))
+  :straight (:build t)
+  :config
+  (setq lsp-ui-doc-show-with-cursor t))
 
 ;; optionally if you want to use debugger
 (use-package dap-mode

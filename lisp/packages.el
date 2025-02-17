@@ -1,3 +1,6 @@
+(add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
+(load-theme 'everblush)
+
 (setq package-archives '(("melpa"  . "https://melpa.org/packages/")
 			 ("gnu"    . "https://elpa.gnu.org/packages/")
 			 ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
@@ -27,9 +30,9 @@
 (setq straight-use-package-by-default t)
 
 (use-package jellybeans-plus-theme
-  :straight (jellybeans-plus-theme :type git :host github :repo "jsmestad/jellybeans-plus-theme")
-  :init
-  (load-theme 'jellybeans-plus t))
+  :straight (jellybeans-plus-theme :type git
+				   :host github
+				   :repo "jsmestad/jellybeans-plus-theme"))
 
 (use-package all-the-icons
   :straight t
@@ -98,7 +101,6 @@
   (setq evil-want-fine-undo t) ; more granular undo with evil
   (evil-set-initial-state 'messages-buffer-mode 'normal)
   (evil-set-initial-state 'dashboard-mode 'emacs)
-  (evil-set-initial-state 'dired-mode 'emacs))
 
 (use-package evil-nerd-commenter
   :straight (:build t)

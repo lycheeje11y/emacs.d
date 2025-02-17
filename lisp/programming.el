@@ -9,4 +9,8 @@
    ("\\.erb\\'" . web-mode)
    ("\\.mustache\\'" . web-mode)
    ("\\.djhtml\\'" . web-mode)))
+
+;; eww config language
+(use-package yuck-mode
+  :straight (:build t))
 (provide 'programming)

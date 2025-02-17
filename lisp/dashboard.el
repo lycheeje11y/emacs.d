@@ -1,5 +1,3 @@
-(use-package page-break-lines :straight (:build t))
-
 ;; use-package with package.el:
 (use-package dashboard
   :straight (:build t)
@@ -24,7 +22,14 @@
   ;; Content is not centered by default. To center, set
   (setq dashboard-center-content t)
   ;; vertically center content
-  (setq dashboard-vertically-center-content t)
+  ;;(setq dashboard-vertically-center-content t)
+
+  (setq dashboard-projects-backend 'projectile)
+
+  (setq dashboard-items '((recents   . 5)
+                          (projects  . 5)
+                          (bookmarks . 5)
+                          (agenda    . 5)))
 
   ;; To disable shortcut "jump" indicators for each section, set
   ;;(setq dashboard-show-shortcuts nil)
